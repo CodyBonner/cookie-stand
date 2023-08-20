@@ -11,6 +11,8 @@ const seattle = {
   cstPHr: [], 
   cookiesPHr: [],
   test: function(){
+    //This section creates a random number of customers and stores the information in an array
+    //then pushes it to the variable cstPHR then returns said value on screen
     let custArray = [];
     for(let i =0; i < this.hours; i++){
       const ranCustNum = Math.floor(Math.random()*(this.customersMax-this.customersMin)+this.customersMin);
