@@ -61,13 +61,9 @@ const seattle = {
 };
 
 
-//seattle.render();
+seattle.render();
 console.log(seattle.cstPHr);
 
-const listContainer = document.getElementById('list');
-const displayedCookies = document.createElement('p');
-displayedCookies.textContent = `List of visitors per hour: ${seattle.cstPHr}`;
-listContainer.appendChild(displayedCookies);
 
 
 //console.log(parseInt(seattle.cstPHr) * seattle.avgCookiesPerCustomer);
