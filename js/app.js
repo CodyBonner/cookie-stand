@@ -9,6 +9,7 @@ const seattle = {
   hours: [14],
   avgCookiesPerCustomer: 6.3,
   cstPHr: [], 
+  cstPHrCont: '',
   cookiesPHr: [],
   test: function(){
     //This section creates a random number of customers and stores the information in an array
@@ -19,7 +20,7 @@ const seattle = {
       custArray.push(ranCustNum);
     }
     this.cstPHr = custArray;
-    return this.cstPHr;
+    return this.cstPHrCont;
   }, 
 
   //section below takes the random number of customers per hour and multiplies it by the
@@ -51,14 +52,10 @@ const seattle = {
     const customerNumber = document.createElement('p');
     customerNumber.textContent = `Random number of customers per hour: ${this.test()}`;
     seattleContainer.appendChild(customerNumber);
-
-    const cookieNumber = document.createElement('li');
-    cookieNumber.textContent = `Random cookies per hour: ${this.cookies()}`;
-    seattleContainer.appendChild(cookieNumber);
-
-
   }
 };
+
+
 
 seattle.render();
 
