@@ -52,7 +52,7 @@ const seattle = {
     customerNumber.textContent = `Random number of customers per hour: ${this.test()}`;
     seattleContainer.appendChild(customerNumber);
 
-    const cookieNumber = document.createElement('li');
+    const cookieNumber = document.createElement('p');
     cookieNumber.textContent = `Random cookies per hour: ${this.cookies()}`;
     seattleContainer.appendChild(cookieNumber);
 
