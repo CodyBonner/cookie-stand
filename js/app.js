@@ -9,7 +9,7 @@ const seattle = {
   hours: [14],
   avgCookiesPerCustomer: 6.3,
   cstPHr: [], 
-  cookiesPHr: [],
+//  cookiesPHr: [],
   test: function(){
     //This section creates a random number of customers and stores the information in an array
     //then pushes it to the variable cstPHR then returns said value on screen
@@ -17,8 +17,8 @@ const seattle = {
     for(let i =0; i < this.hours; i++){
       const ranCustNum = Math.floor(Math.random()*(this.customersMax-this.customersMin)+this.customersMin);
       custArray.push(ranCustNum);
+      this.cstPHr = custArray;
     }
-    this.cstPHr = custArray;
     return this.cstPHr;
   }, 
 
@@ -33,7 +33,7 @@ const seattle = {
       const multipliedValue = parseInt(num * cookieMultiplier);
       multipliedArray.push(multipliedValue);
     }
-    console.log(multipliedArray);
+    //console.log(multipliedArray);
     return(multipliedArray);
     //console.log(cookiesArray);
 
@@ -52,16 +52,22 @@ const seattle = {
     customerNumber.textContent = `Random number of customers per hour: ${this.test()}`;
     seattleContainer.appendChild(customerNumber);
 
+    
     const cookieNumber = document.createElement('p');
-    cookieNumber.textContent = `Random cookies per hour: ${this.cookies()}`;
+    cookieNumber.textContent = `Cookies sold per hour based on customers per hour: ${this.cookies()}`;
     seattleContainer.appendChild(cookieNumber);
-
     
   }
 };
 
-seattle.render();
 
+seattle.render();
+console.log(seattle.cstPHr);
+
+const listContainer = document.getElementById('list');
+const displayedCookies = document.createElement('p');
+displayedCookies.textContent = `List of visitors per hour: ${seattle.cstPHr}`;
+listContainer.appendChild(displayedCookies);
 
 
 //console.log(parseInt(seattle.cstPHr) * seattle.avgCookiesPerCustomer);
