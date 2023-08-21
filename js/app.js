@@ -56,6 +56,15 @@ const seattle = {
     const cookieNumber = document.createElement('p');
     cookieNumber.textContent = `Cookies sold per hour based on customers per hour: ${this.cookies()}`;
     seattleContainer.appendChild(cookieNumber);
+
+    const customerContainer = document.getElementById('list');
+
+    const customerPHour = document.createElement('li');
+    const customerPHour2 = document.createElement('li');
+    customerPHour.textContent = `6am : ${this.cstPHr[0]}`;
+    customerPHour2.textContent = `7am : ${this.cstPHr[1]}`;
+    customerContainer.appendChild(customerPHour);
+    customerContainer.appendChild(customerPHour2);
     
   }
 };
