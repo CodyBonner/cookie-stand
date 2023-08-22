@@ -11,7 +11,7 @@ To utilize the skills and tools I have achieved to showcase a unique and persona
 ### Author: Cody Bonner
 
 ### Links and Resources
-
+[Tyishas Sweets](https://www.tyishassweets.com/)
 * [GitHub Class Repo](https://github.com/CodyBonner/code-challenges)
 
 

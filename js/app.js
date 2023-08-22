@@ -129,7 +129,7 @@ const tokyo = {
     const dailyTotal = document.createElement("p");
     dailyTotal.textContent = `Total: ${this.totalSales}`;
     customerContain.appendChild(dailyTotal);
- },
+  },
 };
 
 
