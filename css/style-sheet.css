@@ -1,8 +1,25 @@
 
 h1{
- 
+ text-align: center;
   font-family: 'Noto Sans KR', sans-serif;
   
+}
+
+#navigation{
+text-align: center;
+}
+
+#dubaiLocation{
+  position: absolute;
+  margin-top: -20vb;
+  margin-left: 35vb;
+  
+}
+
+#dubaiHours{
+  position: absolute;
+  margin-top: -15vb;
+  margin-left: 35vb;
 }
 
 #salesData{
@@ -14,12 +31,42 @@ h1{
   text-align: center;
   font-family: 'Noto Sans KR', sans-serif;
 }
+#lima{
+  margin-top: 3vb;
+}
+#limaLocation{
+  position: absolute;
+  margin-left: 35vb;
+  margin-top: -20vb;
+}
+
+#LimaHours{
+  position: absolute;
+  margin-left: 35vb;
+  margin-top: -15vb;
+}
+
+#paris{
+  margin-top: 3vb;
+}
+#parisLocation{
+  position: absolute;
+  margin-left: 35vb;
+  margin-top: -20vb;
+}
+
+#ParisHours{
+  position: absolute;
+  margin-left: 35vb;
+  margin-top: -15vb;
+}
 
 #biography{
   text-align: center;
   font-size: 3.5vb;
 }
 p{
+  color: #0D0C1D;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
