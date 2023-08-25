@@ -61,6 +61,39 @@ text-align: center;
   margin-top: -15vb;
 }
 
+#seattle{
+  margin-top: 5vb;
+}
+
+#seattleLocation{
+  position: absolute;
+  margin-left: 42vb;
+  margin-top: -25vb;
+}
+
+#seattleHours{
+  position: absolute;
+  margin-left: 42vb;
+  margin-top: -20vb;
+}
+
+#tokyo{
+  margin-top: 5vb;
+  margin-bottom: 5vb;
+}
+
+#tokyoLocation{
+  position: absolute;
+  margin-left: 35vb;
+  margin-top: -23vb;
+}
+
+#tokyoHours{
+  position: absolute;
+  margin-left: 35vb;
+  margin-top: -17vb;
+}
+
 #biography{
   text-align: center;
   font-size: 3.5vb;
