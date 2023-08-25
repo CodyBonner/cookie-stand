@@ -19,7 +19,8 @@ To utilize the skills and tools I have achieved to showcase a unique and persona
 
 ### Lighthouse Accessibility Report Score
 
-![LightHouse-Result](img/lightHouse_score.JPG)
+![LightHouse-Index](img/lighthouse-index.PNG)
+![LightHouse-Sales](img/lighthouse-sales.PNG)
 
 ### Reflections and Comments
 
