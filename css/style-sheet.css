@@ -77,3 +77,18 @@ p{
 body{
 background-color: #90e0ef;
 }
+
+table{
+ position: absolute;
+ margin: 25px auto;
+}
+table th{
+  padding: -3px;
+  border: solid 1px black;
+}
+
+table td{
+  padding: -3px;
+  border: solid 1px black;
+}
+
