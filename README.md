@@ -1,5 +1,7 @@
 # cookie-stand
-repo that will host cookie-stand involving sales, future ordering, based on DOM principles.
+repo that will host cookie-stand involving eye catching home page for Pat's Salmon Cookies, as well as a sales page that holds a table of data utilizing sales data for store locations.
+
+
 
 
 # LAB - 5
