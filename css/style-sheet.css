@@ -16,10 +16,20 @@ text-align: center;
   
 }
 
-#dubaiHours{
+#dubaiBio{
   position: absolute;
   margin-top: -15vb;
   margin-left: 35vb;
+}
+
+#thanks{
+  max-width: 300px;
+  position: absolute;
+  margin-top: 50vb;
+}
+#family{
+  position: absolute;
+  margin-top: 10vb;
 }
 
 #salesData{
@@ -40,7 +50,7 @@ text-align: center;
   margin-top: -20vb;
 }
 
-#LimaHours{
+#LimaBio{
   position: absolute;
   margin-left: 35vb;
   margin-top: -15vb;
@@ -55,7 +65,7 @@ text-align: center;
   margin-top: -20vb;
 }
 
-#ParisHours{
+#ParisBio{
   position: absolute;
   margin-left: 35vb;
   margin-top: -15vb;
@@ -71,7 +81,7 @@ text-align: center;
   margin-top: -25vb;
 }
 
-#seattleHours{
+#seattleBio{
   position: absolute;
   margin-left: 42vb;
   margin-top: -20vb;
@@ -88,7 +98,7 @@ text-align: center;
   margin-top: -23vb;
 }
 
-#tokyoHours{
+#tokyoBio{
   position: absolute;
   margin-left: 35vb;
   margin-top: -17vb;
@@ -128,4 +138,19 @@ table td{
 table tfoot{
   padding: -3px;
   border: solid 1px black;
+}
+
+#cookieCutter{
+  position: absolute;
+  width: 225px;
+  height: 225px;
+  margin-left: 50vb;
+  margin-top: -60vb; 
+}
+
+#chinhookImg{
+  position: absolute;
+  margin-left: 130vb;
+  margin-top: -20vb;
+
 }
