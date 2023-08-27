@@ -148,9 +148,37 @@ table tfoot{
   margin-top: -60vb; 
 }
 
-#chinhookImg{
-  position: absolute;
-  margin-left: 130vb;
-  margin-top: -20vb;
 
+
+#chincookImg{
+  position: absolute;
+  margin-left: 150vb;
+  margin-top: 30vb;
+  height: 12%%;
+  width: 25%;
+}
+
+#salmonImg{
+  position: absolute;
+  margin-left: 120vb;
+  height: 25%;
+  width: 25%;
+}
+
+#shirt{
+  position: absolute;
+  margin-left: 120vb;
+  margin-top: 55vb;
+}
+
+#fishImg{
+  position: absolute;
+  margin-left: 165vb;
+  margin-top: 110vb;
+}
+
+footer{
+  margin-top: 50vb;
+  text-align: center;
+  background-color: #ddd;
 }
