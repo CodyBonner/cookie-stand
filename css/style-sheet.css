@@ -25,7 +25,7 @@ text-align: center;
 #thanks{
   max-width: 300px;
   position: absolute;
-  margin-top: 50vb;
+  margin-top: 30vb;
 }
 #family{
   position: absolute;
@@ -135,7 +135,7 @@ table td{
   border: solid 1px black;
 }
 
-table tfoot{
+ tfoot{
   padding: -3px;
   border: solid 1px black;
 }
@@ -181,4 +181,15 @@ footer{
   margin-top: 50vb;
   text-align: center;
   background-color: #ddd;
+}
+
+#newStore{
+  margin: 5px;
+  margin-top: 35vb;
+}
+
+fieldset *{
+  padding: 3px;
+  margin: 2px;
+  display: block;
 }

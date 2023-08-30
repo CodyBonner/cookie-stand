@@ -118,14 +118,18 @@ function footerCreator(){
     hourTotals.push(hourTotal);
 
   }
+  let totalOfTotals = 0;
   for(let i = 0; i <storeHours.length; i++){
     const footerInfo = document.createElement('td');
     footerInfo.textContent = hourTotals[i];
     hrTotalCont.appendChild(footerInfo);
+    totalOfTotals += hourTotals[i];
   }
-  const blankcell = document.createElement('td');
-  blankcell.textContent = '';
-  hrTotalCont.appendChild(blankcell);
+  
+  const totalOfTotalsCell = document.createElement('td');
+  
+  totalOfTotalsCell.textContent = totalOfTotals;
+  hrTotalCont.appendChild(totalOfTotalsCell);
   console.log(hourTotals);
 }
 
