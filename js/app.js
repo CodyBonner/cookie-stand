@@ -8,6 +8,8 @@ const storeHours = [
   "6:00 pm", "7:00 pm", "8:00 pm",
 ];
 
+let hourTotals = [];
+
 function StoreCalculator(name, customersMin, customersMax, avgCookiesPerCst) {
   this.name = name;
   this.customersMin = customersMin;
@@ -16,7 +18,7 @@ function StoreCalculator(name, customersMin, customersMax, avgCookiesPerCst) {
   this.cstPHr = [];
   this.cookiesPHr = [];
   this.salesTotal = 0;
-  this.hourlyTotals = 0;
+  //this.hourlyTotals = 0;
 }
 
 StoreCalculator.prototype.randomizer = function () {
@@ -62,13 +64,17 @@ StoreCalculator.prototype.render = function () {
 
 };
 
+//This section creates variables prototyping to StoreCalculator
 const seattleStore = new StoreCalculator("Seattle: ", 23, 65, 6.3);
 const tokyoStore = new StoreCalculator("Tokyo: ", 3, 24, 1.2);
 const dubaiStore = new StoreCalculator("Dubai: ", 11, 38, 3.7);
 const parisStore = new StoreCalculator("Paris: ", 20, 38, 2.3);
 const limaStore = new StoreCalculator("Lima: ", 2, 16, 4.6);
+//const texasStore = new StoreCalculator("texas", 25, 69, 4.2);
 
+//Section assigns all the above variables to a new array for easy access
 const locations = [seattleStore, tokyoStore, dubaiStore, parisStore, limaStore];
+
 const tableContainer = document.getElementById("cities");
 
 
@@ -98,16 +104,15 @@ function bodyCreator(){
     locations[i].render();
   }
 }
-bodyCreator();
 
+
+let hrTotalCont = document.createElement('tfoot');
 function footerCreator(){
-
-  const hrTotalCont = document.createElement('tfoot');
+  
   hrTotalCont.textContent = 'Totals: ';
   tableContainer.appendChild(hrTotalCont);
 
-
-  let hourTotals = [];
+  //let hourTotals = [];
   for(let i =0; i < storeHours.length; i++){ //Common to have outer for loop that has equal number of items as target number of displayed items.
     let hourTotal = 0;
     for(let j = 0; j <locations.length; j++){
@@ -130,7 +135,70 @@ function footerCreator(){
   
   totalOfTotalsCell.textContent = totalOfTotals;
   hrTotalCont.appendChild(totalOfTotalsCell);
-  console.log(hourTotals);
+  //console.log(hourTotals);
 }
 
+function footerUpdate(cookiesPHr){
+    for(let i = 0; i< cookiesPHr.length; i++){
+       hourTotals[i] +=  cookiesPHr[i];
+    }
+    console.log(hourTotals);
+  
+    while(hrTotalCont.firstChild){
+      hrTotalCont.removeChild(hrTotalCont.firstChild);
+    }
+
+    let updatedtotals = 0;
+    hrTotalCont.textContent = 'Totals: ';
+    tableContainer.appendChild(hrTotalCont);
+    for(let i = 0; i < cookiesPHr.length; i++){
+
+      const updatedInfo = document.createElement('td');
+      updatedInfo.textContent = hourTotals[i];
+      
+      updatedtotals += hourTotals[i];
+      hrTotalCont.appendChild(updatedInfo);
+
+    }
+
+    const updatedTotalofTotals = document.createElement('td');
+    updatedTotalofTotals.textContent = updatedtotals;
+    hrTotalCont.appendChild(updatedTotalofTotals);
+
+    
+}
+
+//looks and captures form from html
+const storeForm = document.getElementById('newStore');
+
+//creates function event type and captures info from user input on html page
+
+function newStoreHandler(event){
+  event.preventDefault();
+  const newStoreName = event.target.storeName.value;
+  const localMinimumCst = parseInt(event.target.minimumCustomers.value);
+  const localMaximumCst = parseInt(event.target.maximumCustomers.value);
+  const localSalesAverage = parseFloat(event.target.salesAverage.value);
+  //logs user input in console to determine if input is recorded
+  
+  
+   const newLocation = new StoreCalculator(newStoreName, localMinimumCst,localMaximumCst,localSalesAverage);
+
+   newLocation.randomizer();
+   newLocation.cookieCalculator();
+   locations.push(newLocation);
+   //footerCreator();
+   footerUpdate(newLocation.cookiesPHr);
+   newLocation.render();
+    
+  console.log(locations);
+
+  event.target.reset();
+}
+
+
+storeForm.addEventListener('submit', newStoreHandler);
+
+
+bodyCreator();
 footerCreator();

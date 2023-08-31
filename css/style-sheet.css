@@ -122,7 +122,7 @@ background-color: #90e0ef;
 }
 
 table{
- position: absolute;
+ 
  margin: 25px auto;
 }
 table th{
@@ -130,6 +130,10 @@ table th{
   border: solid 1px black;
 }
 
+table tr{
+  border: black solid 1px;
+  padding: -3px;
+}
 table td{
   padding: -3px;
   border: solid 1px black;
